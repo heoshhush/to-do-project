@@ -6,24 +6,31 @@ import Header from '../header/header';
 import ViewCards from '../viewCards/viewCards';
 import Styles from './maker.module.css'
 
-const Maker = ({ authService }) => {
-    const [cards, setCards] = useState({
-        1: {
-            id: 1,
-            todo: 'go to shopping mall and buy egg'
-        },
-        2: {
-            id: 2,
-            todo: 'back to the home'
-        },
-        3: {
-            id: 3,
-            todo: 'i got 99problems'
-        }
-    })
-
-
+const Maker = ({ authService, database }) => {
     const history = useHistory();
+    const historyState = history.location.state.id;
+    
+    const [cards, setCards] = useState({});
+    const [userId, setUserId] = useState(historyState);
+
+
+    const addOrUpdateCard = (card) => {
+        setCards(cards => {
+            const added = {...cards};
+            added[card.id] = card;
+            return(added);
+        })
+        database.saveCard(userId, card)
+    }
+
+    const deleteCard = (card) => {
+        setCards(cards => {
+            const added = {...cards};
+            delete(added[card.id]);
+            return(added)
+        })
+        database.deleteCards(userId, card);
+    }
 
     useEffect(() => {
         authService.onAuthChange((user) => {
@@ -33,6 +40,10 @@ const Maker = ({ authService }) => {
         })
     })
 
+    useEffect(() => {
+        database.loadCards(userId, value => setCards(value))
+    }, [userId])
+
 
     return(
         <section>
@@ -40,9 +51,13 @@ const Maker = ({ authService }) => {
                 authService={authService}
             />
             <main className={Styles.mainContents}>
-                <CardAddForm />
+                <CardAddForm 
+                    addOrUpdateCard={addOrUpdateCard}
+                />
                 <ViewCards 
                     cards={cards}
+                    addOrUpdateCard={addOrUpdateCard}
+                    deleteCard={deleteCard}
                 />
 
             </main>

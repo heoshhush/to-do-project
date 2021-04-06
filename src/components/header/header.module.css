@@ -3,18 +3,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: white;
-  border-bottom: 7px solid black;
+  background: black;
+  color: white;
+  border-bottom: 7px solid darkslateblue;
   min-height: 5em;
 }
 .title {
   font-family: yatraOne;
-  font-size: 3.5em;
-  margin-top: 0.5em;
+  font-size: 5em;
+  margin: -0.5em;
+  margin-top: 0.2em;
 }
 
 .logoutDiv {
   align-self: flex-end;
+  margin-bottom: 1em;
 }
 .logoutBtn {
   cursor: pointer;
@@ -31,6 +34,6 @@
   padding-right: 0.4em;
 }
 .logoutBtn:hover {
-  background-color: black;
+  background-color: grey;
   color: white;
 }

@@ -1,0 +1,33 @@
+.card {
+  width: 65vw;
+  border-bottom: 2px solid darkorchid;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.cardInput {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1.4em;
+  padding: 0.5em;
+  margin-top: 1em;
+  font-family: architectsDaughter;
+  font-weight: 600;
+}
+
+.deleteBtn {
+  cursor: pointer;
+  height: 2em;
+  border: none;
+  background: transparent;
+  margin-bottom: 0.7em;
+}
+
+.deleteBtn:hover {
+  color: red;
+}
+
+.deleteIcon {
+  font-size: 1.5em;
+}

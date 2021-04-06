@@ -4,7 +4,7 @@ import Login from './components/login/login';
 import Maker from './components/maker/maker';
 
 
-const App = ({ authService }) => {
+const App = ({ authService, database }) => {
   return(
     <section className={Styles.container}>
       <BrowserRouter>
@@ -17,6 +17,7 @@ const App = ({ authService }) => {
           <Route path='/maker'>
                 <Maker 
                 authService= {authService}
+                database = {database}
                 />
           </Route>
         </Switch>

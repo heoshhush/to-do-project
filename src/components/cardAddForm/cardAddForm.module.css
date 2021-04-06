@@ -1,22 +1,27 @@
 .cardAddFormTitle {
   text-align: start;
-  font-family: nanumMyeongjo;
-  margin-left: 2em;
+  font-family: shadowsIntoLight;
+  margin: 1.5em 0.3em 0.3em 1em;
+  font-size: 2.2em;
 }
 
 .cardAddForm {
   display: flex;
   flex-direction: row;
   margin-left: 2em;
+  margin-bottom: 2em;
 }
 .cardAddInput {
-  width: 50em;
+  width: 52em;
   height: 3em;
   padding: 0.5em;
   font-size: 1em;
   margin-right: 0.5em;
-  border-radius: 2em;
+  border: 1px soild darkslateblue;
+  border-radius: 1em;
   outline: none;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
 }
 .cardAddBtn {
   cursor: pointer;

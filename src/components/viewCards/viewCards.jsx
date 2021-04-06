@@ -2,13 +2,15 @@ import React from 'react';
 import Card from '../card/card';
 import Styles from './viewCards.module.css'
 
-const ViewCards = ({cards}) => {
+const ViewCards = ({cards, addOrUpdateCard, deleteCard}) => {
     return(
-        <ul>
+        <ul className={Styles.list}>
             {Object.keys(cards).map(key => (
                 <Card 
                     key={key}
                     card={cards[key]}
+                    addOrUpdateCard={addOrUpdateCard}
+                    deleteCard={deleteCard}
                 />
             ))}
             
