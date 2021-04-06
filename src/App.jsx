@@ -7,7 +7,7 @@ import Maker from './components/maker/maker';
 const App = ({ authService, database }) => {
   return(
     <section className={Styles.container}>
-      <BrowserRouter basename="/to-do-list">
+      <BrowserRouter basename="/to-do-project">
         <Switch>
           <Route path='/' exact>
                 <Login 
