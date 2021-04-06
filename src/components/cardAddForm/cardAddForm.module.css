@@ -1,8 +1,8 @@
 .cardAddFormTitle {
   text-align: start;
   font-family: shadowsIntoLight;
-  margin: 1.5em 0.3em 0.3em 1em;
-  font-size: 2.2em;
+  margin: 0.5em 0.3em 0.3em 1em;
+  font-size: 3em;
 }
 
 .cardAddForm {
@@ -22,6 +22,10 @@
   outline: none;
   background-color: #8ec5fc;
   background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  animation-name: changeColor;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
 }
 .cardAddBtn {
   cursor: pointer;
@@ -37,4 +41,28 @@
 }
 .addIcon:hover {
   transform: rotate(180deg);
+}
+
+@keyframes changeColor {
+  0% {
+    background: white;
+  }
+  33% {
+    background: #d9afd9;
+  }
+  66% {
+    background: #97d9e1;
+  }
+  100% {
+    background: white;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cardAddFormTitle {
+    font-size: 2em;
+  }
+  .cardAddBtn {
+    margin-right: 2em;
+  }
 }

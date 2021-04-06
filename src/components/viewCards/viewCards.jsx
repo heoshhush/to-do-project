@@ -3,6 +3,8 @@ import Card from '../card/card';
 import Styles from './viewCards.module.css'
 
 const ViewCards = ({cards, addOrUpdateCard, deleteCard}) => {
+
+    
     return(
         <ul className={Styles.list}>
             {Object.keys(cards).map(key => (
@@ -13,6 +15,7 @@ const ViewCards = ({cards, addOrUpdateCard, deleteCard}) => {
                     deleteCard={deleteCard}
                 />
             ))}
+          
             
         </ul>
     )

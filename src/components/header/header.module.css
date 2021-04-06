@@ -5,7 +5,7 @@
   align-items: center;
   background: black;
   color: white;
-  border-bottom: 7px solid darkslateblue;
+  border-bottom: 7px solid black;
   min-height: 5em;
 }
 .title {
@@ -27,7 +27,7 @@
   background-color: ghostwhite;
   border: none;
   border-radius: 0.2em;
-  margin-right: 0.5em;
+  margin-right: 1em;
   margin-bottom: 0.5em;
   padding: 0 0.3em;
   transition: all 200ms ease;
@@ -36,4 +36,14 @@
 .logoutBtn:hover {
   background-color: grey;
   color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .title {
+    font-size: 3em;
+  }
+  .logoutBtn {
+    font-size: 1em;
+    margin-top: 1.5em;
+  }
 }

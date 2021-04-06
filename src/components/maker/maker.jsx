@@ -36,13 +36,15 @@ const Maker = ({ authService, database }) => {
         authService.onAuthChange((user) => {
             if(!user){
                 history.push('/')
-            }
-        })
+            } else if(user){
+                setUserId(user.uid);
+            }        })
     })
 
     useEffect(() => {
         database.loadCards(userId, value => setCards(value))
-    }, [userId])
+    }, [userId, database])
+
 
 
     return(
@@ -51,6 +53,7 @@ const Maker = ({ authService, database }) => {
                 authService={authService}
             />
             <main className={Styles.mainContents}>
+                
                 <CardAddForm 
                     addOrUpdateCard={addOrUpdateCard}
                 />

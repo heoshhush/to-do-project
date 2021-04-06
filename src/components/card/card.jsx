@@ -4,7 +4,6 @@ import Styles from './card.module.css';
 const Card = ({ card, addOrUpdateCard, deleteCard }) => {
     const inputRef = useRef();
     const onChange = () => {
-        console.log(inputRef.current.value)
         const updated = {
             id: card.id,
             todo: inputRef.current.value

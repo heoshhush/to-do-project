@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { memo, useCallback, useEffect } from 'react';
 import { useHistory } from 'react-router';
 import Styles from './login.module.css'
 
-const Login = ({ authService }) => {
+const Login = memo(
+    ({ authService }) => {
     const history = useHistory();
 
     const onClick = (event) => {
@@ -11,11 +12,11 @@ const Login = ({ authService }) => {
         authService.login(provider).then(console.log)
     }
 
-    const goToMaker = (user) => {
+    const goToMaker = useCallback((user) => {
         history.push({
             pathname: '/maker',
             state: {id: user.uid}})
-    }
+    }, [history])
 
     useEffect(() => {
         authService.onAuthChange(user => {
@@ -25,7 +26,7 @@ const Login = ({ authService }) => {
             }
         }
         )
-    }, [authService])
+    }, [authService, goToMaker])
     
     
     
@@ -46,5 +47,6 @@ const Login = ({ authService }) => {
         </section>
     )
 }
+)
 
 export default Login;

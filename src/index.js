@@ -7,8 +7,8 @@ import AuthService from './services/authService';
 import Database from './services/database';
 
 
-const authService = new AuthService;
-const database = new Database;
+const authService = new AuthService();
+const database = new Database();
 
 ReactDOM.render(
   <React.StrictMode>

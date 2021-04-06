@@ -1,6 +1,6 @@
 .card {
   width: 65vw;
-  border-bottom: 2px solid darkorchid;
+  border-bottom: 2px solid grey;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
