@@ -2,7 +2,11 @@ import { firebaseAuth, githubProvider, googleProvider } from './firebase';
 
 class AuthService {
     login = (provider) => {
-        firebaseAuth.signInWithPopup(provider)
+        return firebaseAuth.signInWithPopup(provider);
+    }
+
+    logout = () => {
+        firebaseAuth.signOut();
     }
 
     getProvider = (provider) => {
@@ -16,7 +20,13 @@ class AuthService {
         }
     }
 
-
+    onAuthChange = (myFunction) => {
+        firebaseAuth.onAuthStateChanged(user => {
+            myFunction(user);
+        })
+    }
 }
+
+// user 포착 및 그에따라 maker로 이동.
 
 export default AuthService;

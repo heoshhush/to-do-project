@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-bottom: 7px solid black;
+  min-height: 5em;
+}
+.title {
+  font-family: yatraOne;
+  font-size: 3.5em;
+  margin-top: 0.5em;
+}
+
+.logoutDiv {
+  align-self: flex-end;
+}
+.logoutBtn {
+  cursor: pointer;
+  font-family: anton;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+  background-color: ghostwhite;
+  border: none;
+  border-radius: 0.2em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0 0.3em;
+  transition: all 200ms ease;
+  padding-right: 0.4em;
+}
+.logoutBtn:hover {
+  background-color: black;
+  color: white;
+}

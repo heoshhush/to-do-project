@@ -1,0 +1,35 @@
+.cardAddFormTitle {
+  text-align: start;
+  font-family: nanumMyeongjo;
+  margin-left: 2em;
+}
+
+.cardAddForm {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2em;
+}
+.cardAddInput {
+  width: 50em;
+  height: 3em;
+  padding: 0.5em;
+  font-size: 1em;
+  margin-right: 0.5em;
+  border-radius: 2em;
+  outline: none;
+}
+.cardAddBtn {
+  cursor: pointer;
+  width: 5em;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.addIcon {
+  font-size: 3em;
+  color: black;
+  transition: transform 500ms ease;
+}
+.addIcon:hover {
+  transform: rotate(180deg);
+}
