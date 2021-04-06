@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/to-do-project/static/css/main.6f0b504d.chunk.css",
+    "main.js": "/to-do-project/static/js/main.355e2bbd.chunk.js",
+    "main.js.map": "/to-do-project/static/js/main.355e2bbd.chunk.js.map",
+    "runtime-main.js": "/to-do-project/static/js/runtime-main.d0f7098c.js",
+    "runtime-main.js.map": "/to-do-project/static/js/runtime-main.d0f7098c.js.map",
+    "static/js/2.1b1f9212.chunk.js": "/to-do-project/static/js/2.1b1f9212.chunk.js",
+    "static/js/2.1b1f9212.chunk.js.map": "/to-do-project/static/js/2.1b1f9212.chunk.js.map",
+    "index.html": "/to-do-project/index.html",
+    "static/css/main.6f0b504d.chunk.css.map": "/to-do-project/static/css/main.6f0b504d.chunk.css.map",
+    "static/js/2.1b1f9212.chunk.js.LICENSE.txt": "/to-do-project/static/js/2.1b1f9212.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/to-do-project/static/media/YatraOne-Regular.c0732c74.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d0f7098c.js",
+    "static/js/2.1b1f9212.chunk.js",
+    "static/css/main.6f0b504d.chunk.css",
+    "static/js/main.355e2bbd.chunk.js"
+  ]
+}
